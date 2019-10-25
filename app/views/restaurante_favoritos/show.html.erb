@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @restaurante_favorito.user_id %>
+</p>
+
+<p>
+  <strong>Rest:</strong>
+  <%= @restaurante_favorito.rest_id %>
+</p>
+
+<%= link_to 'Edit', edit_restaurante_favorito_path(@restaurante_favorito) %> |
+<%= link_to 'Back', restaurante_favoritos_path %>

@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Comentario Platos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Plt</th>
+      <th>Fecha</th>
+      <th>Puntaje</th>
+      <th>Contenido</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @comentario_platos.each do |comentario_plato| %>
+      <tr>
+        <td><%= comentario_plato.user_id %></td>
+        <td><%= comentario_plato.plt_id %></td>
+        <td><%= comentario_plato.fecha %></td>
+        <td><%= comentario_plato.puntaje %></td>
+        <td><%= comentario_plato.contenido %></td>
+        <td><%= link_to 'Show', comentario_plato %></td>
+        <td><%= link_to 'Edit', edit_comentario_plato_path(comentario_plato) %></td>
+        <td><%= link_to 'Destroy', comentario_plato, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Comentario Plato', new_comentario_plato_path %>

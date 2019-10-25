@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Rest:</strong>
+  <%= @plato.rest_id %>
+</p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @plato.nombre %>
+</p>
+
+<p>
+  <strong>Precio:</strong>
+  <%= @plato.precio %>
+</p>
+
+<p>
+  <strong>Descripcion:</strong>
+  <%= @plato.descripcion %>
+</p>
+
+<p>
+  <strong>Porciones:</strong>
+  <%= @plato.porciones %>
+</p>
+
+<p>
+  <strong>Imagen:</strong>
+  <%= @plato.imagen %>
+</p>
+
+<%= link_to 'Edit', edit_plato_path(@plato) %> |
+<%= link_to 'Back', platos_path %>

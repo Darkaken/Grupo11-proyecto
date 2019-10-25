@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Order:</strong>
+  <%= @contiene_plato.order_id %>
+</p>
+
+<p>
+  <strong>Plt:</strong>
+  <%= @contiene_plato.plt_id %>
+</p>
+
+<%= link_to 'Edit', edit_contiene_plato_path(@contiene_plato) %> |
+<%= link_to 'Back', contiene_platos_path %>

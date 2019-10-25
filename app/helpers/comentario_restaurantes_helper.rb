@@ -1,0 +1,2 @@
+module ComentarioRestaurantesHelper
+end

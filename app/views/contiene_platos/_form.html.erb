@@ -1,0 +1,27 @@
+<%= form_with(model: contiene_plato, local: true) do |form| %>
+  <% if contiene_plato.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(contiene_plato.errors.count, "error") %> prohibited this contiene_plato from being saved:</h2>
+
+      <ul>
+      <% contiene_plato.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :order_id %>
+    <%= form.number_field :order_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :plt_id %>
+    <%= form.number_field :plt_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,42 @@
+<%= form_with(model: comentario_plato, local: true) do |form| %>
+  <% if comentario_plato.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(comentario_plato.errors.count, "error") %> prohibited this comentario_plato from being saved:</h2>
+
+      <ul>
+      <% comentario_plato.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.number_field :user_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :plt_id %>
+    <%= form.number_field :plt_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fecha %>
+    <%= form.datetime_select :fecha %>
+  </div>
+
+  <div class="field">
+    <%= form.label :puntaje %>
+    <%= form.number_field :puntaje %>
+  </div>
+
+  <div class="field">
+    <%= form.label :contenido %>
+    <%= form.text_field :contenido %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

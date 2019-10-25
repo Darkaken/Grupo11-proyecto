@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 1
+  plt_id: 1
+  fecha: 2019-10-15 19:55:56
+  puntaje: 1
+  contenido: MyString
+
+two:
+  user_id: 1
+  plt_id: 1
+  fecha: 2019-10-15 19:55:56
+  puntaje: 1
+  contenido: MyString

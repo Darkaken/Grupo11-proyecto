@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @comentario_plato.user_id %>
+</p>
+
+<p>
+  <strong>Plt:</strong>
+  <%= @comentario_plato.plt_id %>
+</p>
+
+<p>
+  <strong>Fecha:</strong>
+  <%= @comentario_plato.fecha %>
+</p>
+
+<p>
+  <strong>Puntaje:</strong>
+  <%= @comentario_plato.puntaje %>
+</p>
+
+<p>
+  <strong>Contenido:</strong>
+  <%= @comentario_plato.contenido %>
+</p>
+
+<%= link_to 'Edit', edit_comentario_plato_path(@comentario_plato) %> |
+<%= link_to 'Back', comentario_platos_path %>

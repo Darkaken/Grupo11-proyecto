@@ -1,0 +1,42 @@
+<%= form_with(model: comentario_restaurante, local: true) do |form| %>
+  <% if comentario_restaurante.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(comentario_restaurante.errors.count, "error") %> prohibited this comentario_restaurante from being saved:</h2>
+
+      <ul>
+      <% comentario_restaurante.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.number_field :user_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :rest_id %>
+    <%= form.number_field :rest_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fecha %>
+    <%= form.datetime_select :fecha %>
+  </div>
+
+  <div class="field">
+    <%= form.label :puntaje %>
+    <%= form.number_field :puntaje %>
+  </div>
+
+  <div class="field">
+    <%= form.label :contenido %>
+    <%= form.text_field :contenido %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

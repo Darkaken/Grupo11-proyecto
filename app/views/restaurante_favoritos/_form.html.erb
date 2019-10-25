@@ -1,0 +1,27 @@
+<%= form_with(model: restaurante_favorito, local: true) do |form| %>
+  <% if restaurante_favorito.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(restaurante_favorito.errors.count, "error") %> prohibited this restaurante_favorito from being saved:</h2>
+
+      <ul>
+      <% restaurante_favorito.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.number_field :user_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :rest_id %>
+    <%= form.number_field :rest_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Contiene Platos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Order</th>
+      <th>Plt</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @contiene_platos.each do |contiene_plato| %>
+      <tr>
+        <td><%= contiene_plato.order_id %></td>
+        <td><%= contiene_plato.plt_id %></td>
+        <td><%= link_to 'Show', contiene_plato %></td>
+        <td><%= link_to 'Edit', edit_contiene_plato_path(contiene_plato) %></td>
+        <td><%= link_to 'Destroy', contiene_plato, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Contiene Plato', new_contiene_plato_path %>

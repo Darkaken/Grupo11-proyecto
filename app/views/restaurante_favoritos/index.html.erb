@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Restaurante Favoritos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Rest</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @restaurante_favoritos.each do |restaurante_favorito| %>
+      <tr>
+        <td><%= restaurante_favorito.user_id %></td>
+        <td><%= restaurante_favorito.rest_id %></td>
+        <td><%= link_to 'Show', restaurante_favorito %></td>
+        <td><%= link_to 'Edit', edit_restaurante_favorito_path(restaurante_favorito) %></td>
+        <td><%= link_to 'Destroy', restaurante_favorito, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Restaurante Favorito', new_restaurante_favorito_path %>

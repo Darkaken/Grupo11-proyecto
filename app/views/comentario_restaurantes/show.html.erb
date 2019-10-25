@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @comentario_restaurante.user_id %>
+</p>
+
+<p>
+  <strong>Rest:</strong>
+  <%= @comentario_restaurante.rest_id %>
+</p>
+
+<p>
+  <strong>Fecha:</strong>
+  <%= @comentario_restaurante.fecha %>
+</p>
+
+<p>
+  <strong>Puntaje:</strong>
+  <%= @comentario_restaurante.puntaje %>
+</p>
+
+<p>
+  <strong>Contenido:</strong>
+  <%= @comentario_restaurante.contenido %>
+</p>
+
+<%= link_to 'Edit', edit_comentario_restaurante_path(@comentario_restaurante) %> |
+<%= link_to 'Back', comentario_restaurantes_path %>

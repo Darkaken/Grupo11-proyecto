@@ -1,0 +1,2 @@
+module ComentarioPlatosHelper
+end
